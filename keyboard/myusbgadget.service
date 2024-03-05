@@ -1,0 +1,12 @@
+# /usr/lib/systemd/system/myusbgadget.service
+[Unit]
+Description=My USB gadget
+After=systemd-modules-load.service
+ 
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/_enable_usb_hid.sh
+ 
+[Install]
+WantedBy=sysinit.target

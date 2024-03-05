@@ -36,17 +36,17 @@ def send_report(report):
     with open('/dev/hidg0', 'rb+') as fd:
         fd.write(reprot_data)
 
-
-time.sleep(10) # Sleep for 3 seconds
+print("Waiting for 3s")
+time.sleep(3) # Sleep for 3 seconds
 #cat /proc/bus/input/devices
-#send_chr('a')
-#send_key_up()
+send_chr('a')
+send_key_up()
 
 #send_chr('A')
 
-send_key_shift()
+#send_key_shift()
 
-send_key_up()
+#send_key_up()
 
 # Press a
 #write_report(NULL_CHAR*2 + chr(4) + NULL_CHAR*5)
